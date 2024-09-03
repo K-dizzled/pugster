@@ -48,20 +48,19 @@ function submitForm() {
         formData[collectionId] = selectedOption.textContent.trim();
     });
 
-    // Prepare the data for Formspree
-    const data = new URLSearchParams(formData);
+    // Convert formData to URL-encoded string
+    const data = new URLSearchParams(formData).toString();
 
-    // Send data to Formspree
-    fetch('https://formspree.io/f/mwpezvwd', {
-        method: 'POST',
+    // Send data to Formspree using Axios
+    axios.post('https://formspree.io/f/mwpezvwd', data, {
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: data.toString()
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Accept': 'application/json'  // Ensures we receive a JSON response
+        }
     })
     .then(response => {
         console.log('Response:', response);
-        if (response.ok) {
+        if (response.status === 200) {
             alert('Ура *dancing minion*');
         } else {
             alert('Чзх что то сломалось');
