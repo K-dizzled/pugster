@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Cruinn';
+    src: url('Cruinn-Light.woff2') format('woff2'),
+        url('Cruinn-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cruinn';
+    src: url('Cruinn.woff2') format('woff2'),
+        url('Cruinn.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cruinn';
+    src: url('Cruinn-Thin.woff2') format('woff2'),
+        url('Cruinn-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cruinn';
+    src: url('Cruinn-Black.woff2') format('woff2'),
+        url('Cruinn-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cruinn';
+    src: url('Cruinn-Bold.woff2') format('woff2'),
+        url('Cruinn-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cruinn';
+    src: url('Cruinn-Medium.woff2') format('woff2'),
+        url('Cruinn-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

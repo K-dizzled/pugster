@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+	<meta charset="UTF-8">
+	<title>Дорогая Олеся</title>
+	<meta name="description" content=" ">
+	<meta name="keywords" content=" ">
+	<link rel="stylesheet" href="/css/main.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
-<body>
-    <h1>Hello, World!</h1>
+
+<body class="background-image">
+	<div class="content-block">
+		<h1 class="content-title">ДОРОГАЯ ОЛЕСЯ,</h1>
+		<div class="text-block-left">Мне кажется ты удивительная девушка и я хотел бы позвать тебя на свидание</div>
+
+		<div class="text-block-right">Место:</div>
+
+		<div id="place-collection" class="image-selection-container">
+			<div class="image-option" onclick="selectImage(this)">
+				<img src="images/spb.png" alt="Option 1">
+				<p class="image-caption">Санкт-Петербург</p>
+			</div>
+			<div class="image-option" onclick="selectImage(this)">
+				<img src="images/seoul.jpg" alt="Option 2">
+				<p class="image-caption">Сеул</p>
+			</div>
+			<div class="image-option" onclick="selectImage(this)">
+				<img src="images/dubai.jpg" alt="Option 3">
+				<p class="image-caption">Дубай</p>
+			</div>
+		</div>
+
+		<div class="text-block-left">Время:</div>
+
+		<div id="month-collection" class="collection-container-left">
+			<div class="collection-option" onclick="selectBox(this)">
+				Октябрь
+			</div>
+			<div class="collection-option" onclick="selectBox(this)">
+				Ноябрь
+			</div>
+			<div class="collection-option" onclick="selectBox(this)">
+				Декабрь
+			</div>
+		</div>
+
+		<div id="week-collection" class="collection-container-right">
+			<div class="collection-option" onclick="selectBox(this)">
+				Неделя 1
+			</div>
+			<div class="collection-option" onclick="selectBox(this)">
+				Неделя 2
+			</div>
+			<div class="collection-option" onclick="selectBox(this)">
+				Неделя 3
+			</div>
+			<div class="collection-option" onclick="selectBox(this)">
+				Неделя 4
+			</div>
+		</div>
+
+		<div class="text-block-left">Твои любимые цветы:</div>
+		
+		<div id="flowers-collection" class="image-selection-container-left">
+			<div class="image-option" onclick="selectImage(this)">
+				<img src="images/bushroses.jpg" alt="Option 1">
+				<p class="image-caption">Кустовые розы</p>
+			</div>
+			<div class="image-option" onclick="selectImage(this)">
+				<img src="images/roses.jpg" alt="Option 2">
+				<p class="image-caption">Розы</p>
+			</div>
+			<div class="image-option" onclick="selectImage(this)">
+				<img src="images/tulips.jpg" alt="Option 3">
+				<p class="image-caption">Тюльпаны</p>
+			</div>
+			<div class="image-option" onclick="selectImage(this)">
+				<img src="images/pioni.jpg" alt="Option 4">
+				<p class="image-caption">Пионы</p>
+			</div>
+			<div class="image-option" onclick="selectImage(this)">
+				<img src="images/drugoe.jpg" alt="Option 5">
+				<p class="image-caption">Другое</p>
+			</div>
+		</div>
+
+		<button class="submit-button" onclick="submitForm()">Поехали</button>
+	</div>
+
+	<script src="/scripts/main.js"></script>
 </body>
 </html>

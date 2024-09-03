@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'Cruinn';
+    src: url('../fonts/cruinn-font/Cruinn-Light.woff2') format('woff2'),
+         url('../fonts/cruinn-font/Cruinn-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cruinn';
+    src: url('../fonts/cruinn-font/Cruinn.woff2') format('woff2'),
+         url('../fonts/cruinn-font/Cruinn.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cruinn';
+    src: url('../fonts/cruinn-font/Cruinn-Bold.woff2') format('woff2'),
+         url('../fonts/cruinn-font/Cruinn-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    src: url('../fonts/montserrat/Unbounded-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    src: url('../fonts/montserrat/Unbounded-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+html {
+    height: 100%;
+    overflow: hidden; /* Prevents the default scrollbar */
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps background image fixed */
+    background-repeat: no-repeat;
+}
+
+/* Style the body to allow scrolling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto; /* Allows scrolling */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+body::-webkit-scrollbar {
+    width: 0; /* Removes scrollbar space */
+    background: transparent; /* Optional: just makes scrollbar invisible */
+}
+
+/* Content Block Styles */
+.content-block {
+    width: 60%;
+    background-color: white;
+    padding: 100px; /* Adds padding for content inside */
+    margin: 100px auto; /* Adds equal top and bottom margins, centers block horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+	flex-wrap: wrap; 
+}
+
+.content-title {
+	font-family: 'Unbounded', sans-serif;
+	font-weight: 400;
+	font-size: 2em;
+	color: #333;
+	margin: 0;
+	padding-bottom: 10px;
+}
+
+.text-block-right {
+    font-family: 'Unbounded', sans-serif; /* Use another custom font here if desired */
+    font-size: 1.2em;
+    color: #333;
+    width: 100%; /* Takes full width of the container */
+    text-align: right; /* Aligns text to the right */
+    margin: 10px 0; /* Adds some vertical margin for spacing */
+}
+
+.image-selection-container-left {
+    display: flex;
+    justify-content: flex-start; /* Aligns images to the left */
+    margin-top: 10px; /* Adds some margin at the top for spacing */
+    width: 100%;
+	flex-wrap: wrap;
+}
+
+.image-selection-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns the images to the right */
+    margin-top: 10px; /* Smaller margin between sections */
+    width: 100%;
+	flex-wrap: wrap;
+}
+
+.image-option {
+    position: relative; /* Allows the overlay to be positioned absolutely */
+    cursor: pointer;
+    text-align: center;
+    margin: 0 10px; /* Smaller margin between images */
+    width: 150px; /* Fixed width for the image container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-option img {
+    width: 150px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    object-fit: cover; /* Ensures image covers the container area */
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.image-option.selected::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px; /* Same as image width */
+    height: 100px; /* Same as image height */
+    background-color: rgba(255, 105, 180, 0.4); /* 30% transparent pink */
+    border-radius: 5px;
+    pointer-events: none; /* Allows clicks to go through the overlay */
+    z-index: 1; /* Ensures overlay is on top of the image */
+}
+
+.image-caption {
+    margin-top: 5px;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 0.9em;
+    color: #666;
+    width: 100%; /* Ensures caption width matches image */
+    text-align: center;
+    z-index: 2; /* Ensures caption is above the overlay */
+}
+
+/* Text Block Styles */
+.text-block-left, .text-block-right {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1.2em;
+    color: #333;
+    margin: 20px 0;
+}
+
+.text-block-left {
+    text-align: left;
+    width: 100%;
+}
+
+.text-block-right {
+    text-align: right;
+    width: 100%;
+}
+
+/* Collection Container Styles */
+.collection-container-left, .collection-container-right {
+    display: flex;
+    justify-content: flex-start; /* Left aligned */
+    gap: 10px; /* Space between boxes */
+    margin-bottom: 20px;
+	flex-wrap: wrap;
+}
+
+.collection-container-right {
+    justify-content: flex-end; /* Right aligned */
+}
+
+/* Collection Option Styles */
+.collection-option {
+	font-family: 'Unbounded', sans-serif;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative; /* To position the overlay correctly */
+    text-align: center;
+}
+
+.collection-option.selected::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 105, 180, 0.3); /* 30% transparent pink */
+    border-radius: 5px;
+    pointer-events: none; /* Allows clicks to go through the overlay */
+}
+
+.submit-button {
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1.2em;
+    margin-top: 20px; /* Adds some margin at the top for spacing */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+    background-color: rgba(255, 105, 180, 0.3); /* Hover effect with pink color */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
