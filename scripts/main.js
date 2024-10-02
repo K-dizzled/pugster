@@ -8,7 +8,7 @@ function selectBox(element) {
     });
 
     // Add 'selected' class to the clicked option
-    element.classList.add('selected');
+    element.classList.add('selected'); 
 }
 
 function selectImage(element) {
